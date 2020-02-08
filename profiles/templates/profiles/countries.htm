@@ -1,0 +1,43 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+<H1>Welcome to Home, coming soon</H1>
+
+
+
+{% block main %}
+<main>
+                    
+    
+    <div id="wrap" class="oe_structure oe_empty">
+      <section class="s_features">
+        <div class="container">
+          <h1 class="s_title_thin">
+
+                <font style="font-size: 30px;">Browse Profiles By Country</font>
+              </h1>
+            </div>
+          </section>
+
+      <section class="s_features pt32 pb32 bg-300 oe_custom_bg">
+        <div class="container">
+          
+
+          <div class="row">
+          	{% for country in countries %}
+            <div class="pt32 pb32 text-center offset-lg-1 col-lg-2">
+              <a href="{{ country.get_absolute_url }}"><img class="img-fluid o_we_custom_image rounded-circle" src="{{ country.country_logo.url }}" data-original-title="" title="" aria-describedby="tooltip720756"/> </a>
+              <a href="{{ country.get_absolute_url }}">
+              <h3>
+                <font style="font-size: 24px;">{{country.name}}</font>
+              </h3>
+          	</a>
+            </div>
+            {% endfor %}
+        </div>
+      </section>
+      
+    </div>
+  
+                </main>
+{% endblock main %}

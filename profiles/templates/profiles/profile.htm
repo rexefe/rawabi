@@ -1,0 +1,68 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+
+
+
+<!-- <img src="{{ country.country_logo.url }}" alt="some image" /> -->
+
+{% block main %}
+<main>
+                    
+    
+    <div id="wrap" class="oe_structure oe_empty">
+<div class="container">
+     <section class="bg-light o_footer">
+     	
+          <div class="row">
+          	<div class="">
+            <table>
+                  <tr>
+                     
+                  </tr>
+                  <tr>
+                      <td>  <img class="img-fluid o_we_custom_image rounded-circle" src="{{ profile.profile_url.url}}" data-original-title="" alt="cant load image" aria-describedby="tooltip720756"/> 
+                      <h3> Name:  {{ profile.name }} </h3></td>
+                      
+                 </tr>
+                  <tr>
+                      <td> </td>
+                      
+                  <tr>
+                      <td>  <h5> Country: {{ profile.country }} </h5> </td>
+                      <td>  <h5> Gender: {{ profile.gender }} </h5></td>
+                 </tr>
+                 <tr>
+                      <td> <h5> Age: {{ profile.age }} </h5> </td>
+                      <td>  <h5> Level of Education: {{ profile.level_edu }} </h5></td>
+                 </tr>
+                 <tr>
+                      <td> <h5> Proffesion: {{ profile.prof }} </h5> </td>
+                      <td>  <h5> Is Reserved: {{ profile.is_reserved }} </h5></td>
+                 </tr>
+                  <tr>
+                      <td> <h5> Biography: {{ profile.bio }} </h5> </td>
+                      <td>  </td>
+                 </tr>
+
+            </table> 
+
+
+          	
+          </div>
+          </div>
+ <div class="row">
+<BUTTON> Reserve this Profile</BUTTON>
+</div>
+
+
+     </section>
+
+      </div>
+
+    </div>
+  
+                </main>
+{% endblock main %}
+
+

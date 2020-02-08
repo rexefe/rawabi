@@ -1,0 +1,276 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+<H1>Welcome to Home, coming soon</H1>
+
+
+
+{% block main %}
+<main>
+                    
+    
+    <div id="wrap" class="oe_structure oe_empty">
+      <div id="myCarousel1564630080916" class="s_carousel carousel slide s_carousel_default" data-interval="10000">
+        <div class="carousel-inner">
+          <div class="carousel-item oe_img_bg pt152 pb152 oe_custom_bg active" style="background-image: url(static/images/canstockphoto2442956.jpg); background-position: 44.53% 35.33%;" data-name="Slide">
+            <div class="container">
+              <div class="row content">
+                <div class="carousel-content col-lg-7">
+                  <div class="s_title pb8" data-name="Title">
+                    <h2 class="s_title_default text-muted">
+                      <font style="background-color: rgb(255, 255, 255);" class="text-alpha">
+                        <b>RAWABI</b>
+                      </font>
+                      <font style="color: rgb(255, 255, 255); font-size: 62px;">
+                        <br>
+                      </font>
+                    </h2>
+                    <h2 class="s_title_default">
+                      <font style="background-color: rgb(255, 255, 255);" class="text-alpha">
+                        <b>Outsourcing </b>
+                      </font>
+                    </h2>
+                    <h2 class="s_title_default">
+                      <font style="background-color: rgb(255, 255, 255);" class="text-alpha">
+                        <b>Agency</b>
+                      </font>
+                    </h2>
+                  </div>
+                  <p class="lead">
+                    <br>
+                  </p>
+                  <div class="pb16 pt16 s_btn text-left" data-name="Buttons">
+                    <a href="/contactus" class="btn flat btn-primary" data-original-title="" title="" aria-describedby="tooltip920019">about us </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+
+      <section class="s_features">
+        <div class="container">
+          <div class="container">
+          <div class="row s_nb_column_fixed">
+            <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;">
+              <h1 class="s_title_default">COUNTRIES</h1>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="container">
+          <div class="row">
+          	{% for country in countries %}
+            <div class="pt32 pb32 text-center offset-lg-1 col-lg-2">
+              <a href="{{ country.get_absolute_url }}"><img class="img-fluid o_we_custom_image rounded-circle" src="{{ country.country_logo.url }}" data-original-title="" title="" aria-describedby="tooltip720756"/> </a>
+              <a href="{{ country.get_absolute_url }}">
+              <h3>
+                <font style="font-size: 24px;">{{country.name}}</font>
+              </h3>
+          	</a>
+            </div>
+            {% endfor %}
+        </div>
+      </section>
+
+      <section class="pt32 pb32">
+        <div class="container">
+          <div class="row s_nb_column_fixed">
+            <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;">
+              <h1 class="s_title_default">OUR SERVICES</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_features s_three_columns pt32 pb32">
+        <div class="container">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+              <div class="card bg-white">
+                <img class="card-img-top" src="{% static 'images/image1.jpg' %}" alt="Odoo - Sample 1 for three columns"/>
+                <div class="card-body">
+                  <h3 class="card-title o_default_snippet_text">Feature One</h3>
+                  <p class="card-text o_default_snippet_text">Adapt these three columns to fit you design need. To duplicate, delete or move columns, select the column and use the top icons to perform your action.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+              <div class="card bg-white">
+                <img class="card-img-top" src="{% static 'images/image2.jpg' %}" alt="Odoo - Sample 2 for three columns"/>
+                <div class="card-body">
+                  <h3 class="card-title o_default_snippet_text">Feature Two</h3>
+                  <p class="card-text o_default_snippet_text">To add a fourth column, reduce the size of these three columns using the right icon of each block. Then, duplicate one of the column to create a new one as a copy.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 s_col_no_bgcolor pt16 pb16">
+              <div class="card bg-white">
+                <img class="card-img-top" src="{% static 'images/image3.jpg ' %}" alt="Odoo - Sample 3 for three columns"/>
+                <div class="card-body">
+                  <h3 class="card-title o_default_snippet_text">Feature Three</h3>
+                  <p class="card-text o_default_snippet_text">Delete the above image or replace it with a picture that illustrates your message. Click on the picture to change it's <em class="o_default_snippet_text">rounded corner</em> style.</p>
+                  <div class="s_btn text-left pb0 pt16" data-name="Button">
+                    <a href="#" class="btn btn-primary btn-sm o_default_snippet_text">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pt32 pb32">
+        <div class="container">
+          <div class="row s_nb_column_fixed">
+            <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;">
+              <h1 class="s_title_default">
+                <font style="font-size: 62px;">HOW IT WORKS</font>
+              </h1>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <section class="s_process_steps pt24 pb24">
+          <div class="container">
+            <div class="row no-gutters">
+
+              <div class="col-lg-3 s_process_step pt24 pb24">
+                <div class="s_process_step_icon">
+                  <span>
+                  <i class="fa fa-shopping-basket fa-2x mx-auto rounded-circle bg-alpha"></i>
+                  </span>
+                </div>
+                <div class="s_process_step_content text-center">
+                  <h2 class="o_default_snippet_text">Add to cart</h2>
+                  <p class="o_default_snippet_text">Let your customers follow <br/>and understand your process.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 s_process_step pt24 pb24">
+                <div class="s_process_step_icon">
+                  <span>
+                <i class="fa fa-unlock-alt fa-2x mx-auto rounded-circle bg-beta"></i>
+                  </span>
+                </div>
+                <div class="s_process_step_content text-center">
+                  <h2 class="o_default_snippet_text">Sign in</h2>
+                  <p class="o_default_snippet_text">Click on the icon to adapt it <br/>to your purpose.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 s_process_step pt24 pb24">
+                <div class="s_process_step_icon">
+                  <span>
+                    <i class="fa fa-paypal fa-2x mx-auto rounded-circle bg-gamma"></i>
+                  </span>
+                </div>
+                <div class="s_process_step_content text-center">
+                  <h2 class="o_default_snippet_text">Pay</h2>
+                  <p class="o_default_snippet_text">Duplicate blocks <br/>to add more steps.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 s_process_step pt24 pb24">
+                <div class="s_process_step_icon">
+                  <span>
+                    <i class="fa fa-plane fa-2x mx-auto rounded-circle bg-delta"></i>
+                  </span>
+                </div>
+                <div class="s_process_step_content text-center">
+                  <h2 class="o_default_snippet_text">Get Delivered</h2>
+                  <p class="o_default_snippet_text">Select and delete blocks <br/>to remove some steps.</p>
+                </div>
+              </div> 
+            </div> 
+          
+        </div>
+
+      </div>
+      
+      </section>
+
+      <section class="pt32 pb32">
+        <div class="container">
+          <div class="row s_nb_column_fixed">
+            <div class="col-lg-12 s_title pt16 pb16" style="text-align: center;">
+              <h1 class="s_title_default">
+                <font style="font-size: 62px;">REQUIRED DOCUMENTS</font>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s_features_grid pt48 pb24">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 s_col_no_bgcolor pb24">
+              <div class="row">
+                <div class="col-lg-12 pb24" data-name="Box">
+                  <h2 class="o_default_snippet_text">First list of Features</h2>
+                  <h5 class="text-primary o_default_snippet_text">Add a great slogan.</h5>
+                </div>
+                <div class="col-lg-12 pt16 pb16" data-name="Box">
+                  <i class="fa fa-2x fa-font-awesome rounded-circle bg-primary s_features_grid_icon"></i>
+                  <div class="s_features_grid_content">
+                    <h4 class="o_default_snippet_text">Change Icons</h4>
+                    <p class="o_default_snippet_text">Double click an icon to replace it with one of your choice.</p>
+                  </div>
+                </div>
+                <div class="col-lg-12 pt16 pb16" data-name="Box">
+                  <i class="fa fa-2x fa-files-o rounded-circle bg-primary s_features_grid_icon"></i>
+                  <div class="s_features_grid_content">
+                    <h4 class="o_default_snippet_text">Duplicate</h4>
+                    <p class="o_default_snippet_text">Duplicate blocks and columns to add more features.</p>
+                  </div>
+                </div>
+                <div class="col-lg-12 pt16 pb16" data-name="Box">
+                  <i class="fa fa-2x fa-trash rounded-circle bg-primary s_features_grid_icon"></i>
+                  <div class="s_features_grid_content">
+                    <h4 class="o_default_snippet_text">Delete Blocks</h4>
+                    <p class="o_default_snippet_text">Select and delete blocks to remove some features.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 s_col_no_bgcolor pb24">
+              <div class="row">
+                <div class="col-lg-12 pb24" data-name="Box">
+                  <h2 class="o_default_snippet_text">Second list of Features</h2>
+                  <h5 class="text-secondary o_default_snippet_text">Add a great slogan.</h5>
+                </div>
+                <div class="col-lg-12 pt16 pb16" data-name="Box">
+                  <i class="fa fa-2x fa-magic rounded bg-secondary s_features_grid_icon"></i>
+                  <div class="s_features_grid_content">
+                    <h4 class="o_default_snippet_text">Great Value</h4>
+                    <p class="o_default_snippet_text">Turn every feature into a benefit for your reader.</p>
+                  </div>
+                </div>
+                <div class="col-lg-12 pt16 pb16" data-name="Box">
+                  <i class="fa fa-2x fa-eyedropper rounded bg-secondary s_features_grid_icon"></i>
+                  <div class="s_features_grid_content">
+                    <h4 class="o_default_snippet_text">Edit Styles</h4>
+                    <p class="o_default_snippet_text">You can edit colors and background to highlight features.</p>
+                  </div>
+                </div>
+                <div class="col-lg-12 pt16 pb16" data-name="Box">
+                  <i class="fa fa-2x fa-picture-o rounded bg-secondary s_features_grid_icon"></i>
+                  <div class="s_features_grid_content">
+                    <h4 class="o_default_snippet_text">Sample Icons</h4>
+                    <p class="o_default_snippet_text">All these icons are completely free for commercial use.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+      
+      
+    </div>
+  
+                </main>
+{% endblock main %}

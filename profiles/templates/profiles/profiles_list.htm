@@ -1,0 +1,63 @@
+
+
+{% extends 'base.htm' %}
+{% load static %}
+
+
+
+
+<!-- <img src="{{ country.country_logo.url }}" alt="some image" /> -->
+
+{% block main %}
+<main>
+                    
+    
+    <div id="wrap" class="oe_structure oe_empty">
+    <div class="container">
+    <section class="s_features">
+
+    	
+    <div class="row s_nb_column_fixed">
+            <div class="col-lg-12 s_title pt16 pb16">
+              <h1 class="s_title_thin">
+
+                <font style="font-size: 30px;">Browse Profiles for {{country.name}} ({{men_or_women}})</font>
+              </h1>
+              {% if men_or_women == 'Men' %}
+             			 <a href="{{country.get_absolute_url}}/2"> <p>View Women Profiles</p>
+              			
+              		
+              {% elif men_or_women == 'Women' %}
+              		
+              			
+              				<a href="{{country.get_absolute_url}}/1"> <p>View Men Profiles</p>
+              {% endif %}
+
+            </div>
+          </div>
+     </section>
+ </div>
+ 	<div class="container">
+    <section class="s_features">
+        <div class="container">
+          <div class="row">
+          	{% for profile in profiles %}
+            <div class="pt32 pb32 text-center offset-lg-1 col-lg-2">
+              <a href="{{ profile.get_absolute_url }}"><img class="img-fluid o_we_custom_image rounded-circle" src="{{ profile.profile_url.url}}" data-original-title="" alt="profile picture" aria-describedby="tooltip720756"/> </a>
+              <a href="{{ profile.get_absolute_url }}">
+              <h3>
+                <font style="font-size: 24px;">{{profile.name}}</font>
+              </h3>
+          	</a>
+            </div>
+            {% endfor %}
+        </div>
+      </section>
+  </div>
+      
+    </div>
+  
+                </main>
+{% endblock main %}
+
+
